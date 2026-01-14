@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CESTARA — Civil • Engineering • Survey • Technology</title>
+  <meta name="description" content="Cestara integrates civil engineering, surveying, and technology to guide projects from concept to reality. We don't just measure the land; we illuminate the way forward." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand-mini" href="#top" aria-label="CESTARA Home">
+          <img src="assets/images/cestara-icon.png" alt="" class="brand-icon" aria-hidden="true" />
+          <strong>CESTARA</strong>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#method">Method</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="btn primary" href="#contact">
+          Start a Project <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div class="hero-grid">
+        <div>
+          <h1>Find your path.</h1>
+          <p class="sub">
+            Cestara integrates civil engineering, surveying, and technology to guide projects from concept to reality.
+            We don't just measure the land; we illuminate the way forward.
+          </p>
+        </div>
+
+        <aside class="logo-card" aria-label="CESTARA brand mark">
+          <img
+            src="assets/images/cestara-logo.png"
+            alt="CESTARA logo: geometric star icon above the word CESTARA and the line 'CIVIL • ENGINEERING • SURVEY • TECHNOLOGY'."
+            loading="eager"
+          />
+        </aside>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="tag"><span class="icon" aria-hidden="true"></span> CIVIL</div>
+            <h3>Earthworks & Infrastructure</h3>
+            <p>Concept to construction support, documentation, and pragmatic site-driven design.</p>
+          </div>
+
+          <div class="card">
+            <div class="tag"><span class="icon gold" aria-hidden="true"></span> ENGINEERING</div>
+            <h3>Design & Deliverability</h3>
+            <p>Constraints mapped early—constructability, cost risk, and code compliance aligned.</p>
+          </div>
+
+          <div class="card">
+            <div class="tag"><span class="icon cyan" aria-hidden="true"></span> SURVEY</div>
+            <h3>Survey & Setout</h3>
+            <p>High-confidence control, feature capture, and field-to-office workflows that reduce rework.</p>
+          </div>
+
+          <div class="card">
+            <div class="tag"><span class="icon" aria-hidden="true"></span> TECHNOLOGY</div>
+            <h3>Reality Capture</h3>
+            <p>Drone and LiDAR-enabled outputs that keep everyone working from the same truth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Method</h2>
+        </div>
+
+        <div class="cards" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="card">
+            <div class="tag"><span class="icon" aria-hidden="true"></span> 01</div>
+            <h3>Chart</h3>
+            <p>Capture reality: control, surfaces, constraints, and the moving pieces that matter.</p>
+          </div>
+          <div class="card">
+            <div class="tag"><span class="icon" aria-hidden="true"></span> 02</div>
+            <h3>Converge</h3>
+            <p>Bring Civil + Engineering + Survey + Tech into one model so decisions are aligned.</p>
+          </div>
+          <div class="card">
+            <div class="tag"><span class="icon" aria-hidden="true"></span> 03</div>
+            <h3>Illuminate</h3>
+            <p>Deliver clear outputs—plans, surfaces, and data—so teams build with confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="wrap">
+        <div class="cta-band">
+          <div>
+            <h3>Ready to illuminate the way forward?</h3>
+            <p>Send a brief, a site location, or a set of constraints—then we'll chart the best path.</p>
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn primary" href="#" id="openFormBtn">Open enquiry form <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact Form Modal -->
+  <div id="contactModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Start Your Project</h2>
+        <button class="modal-close" id="closeModalBtn" aria-label="Close contact form">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required aria-required="true" />
+          <span class="error-message" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required aria-required="true" />
+          <span class="error-message" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+
+        <div class="form-group">
+          <label for="projectType">Project Type</label>
+          <select id="projectType" name="projectType">
+            <option value="">Select a service...</option>
+            <option value="civil">Civil / Earthworks & Infrastructure</option>
+            <option value="engineering">Engineering / Design & Deliverability</option>
+            <option value="survey">Survey & Setout</option>
+            <option value="technology">Reality Capture / LiDAR</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Project Details <span class="required">*</span></label>
+          <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Tell us about your site location, constraints, or project brief..."></textarea>
+          <span class="error-message" id="messageError"></span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Send Enquiry <span aria-hidden="true">→</span></button>
+          <button type="button" class="btn" id="cancelBtn">Cancel</button>
+        </div>
+      </form>
+
+      <div id="formSuccess" class="form-success" style="display: none;">
+        <div class="success-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3>Thank you for your enquiry!</h3>
+        <p>We'll be in touch shortly to discuss your project.</p>
+        <button class="btn primary" id="closeSuccessBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <strong style="letter-spacing:.16em;">CESTARA</strong>
+        <div style="margin-top:6px;">Civil • Engineering • Survey • Technology</div>
+      </div>
+
+      <div class="small-links" aria-label="Footer links">
+        <a href="#services">Services</a>
+        <a href="#method">Method</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div>© <span id="year"></span> Cestara. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
