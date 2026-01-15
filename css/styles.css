@@ -515,6 +515,18 @@ section {
   flex-wrap: wrap;
 }
 
+.form-actions .btn.primary {
+  background: linear-gradient(135deg, var(--space), #1a3a5c);
+  border-color: var(--space);
+  color: #fff;
+}
+
+.form-actions .btn:not(.primary) {
+  background: rgba(11, 30, 59, .08);
+  border-color: rgba(11, 30, 59, .20);
+  color: #0b0f1a;
+}
+
 .form-success {
   padding: 48px 24px;
   text-align: center;
