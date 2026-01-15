@@ -559,6 +559,12 @@ section {
   font-size: 15px;
 }
 
+.form-success .btn.primary {
+  background: linear-gradient(135deg, var(--space), #1a3a5c);
+  border-color: var(--space);
+  color: #fff;
+}
+
 /* Footer */
 footer {
   border-top: 1px solid var(--line);
