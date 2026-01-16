@@ -1,5 +1,8 @@
 // CESTARA Website - Main JavaScript
 
+// Initialize EmailJS
+emailjs.init('0CB_aewicCfR7FLat');
+
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -164,16 +167,22 @@ contactForm.addEventListener("submit", async (e) => {
   submitBtn.innerHTML = 'Sending...';
 
   try {
-    // TODO: Replace this with your actual form submission endpoint
-    // For now, we'll simulate a successful submission
-    await simulateFormSubmission(formData);
+    // Send email via EmailJS
+    await emailjs.send('service_wjte04j', 'template_cbs0wk7', {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone || 'Not provided',
+      project_type: formData.projectType || 'Not specified',
+      message: formData.message,
+      time: new Date().toLocaleString('en-AU', {
+        dateStyle: 'full',
+        timeStyle: 'short'
+      })
+    });
 
     // Show success message
     contactForm.style.display = "none";
     formSuccess.style.display = "block";
-
-    // Log to console (for development)
-    console.log("Form submission:", formData);
 
   } catch (error) {
     alert("There was an error sending your enquiry. Please try again or contact us directly.");
@@ -183,21 +192,6 @@ contactForm.addEventListener("submit", async (e) => {
     submitBtn.innerHTML = originalText;
   }
 });
-
-// Simulate form submission (replace with actual API call)
-function simulateFormSubmission(data) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      // In production, replace this with:
-      // fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data)
-      // })
-      resolve(data);
-    }, 1000);
-  });
-}
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
