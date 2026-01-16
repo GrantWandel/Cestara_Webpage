@@ -56,6 +56,8 @@ function openModal() {
 }
 
 function closeModal() {
+  // Remove focus from modal elements before hiding
+  document.activeElement.blur();
   modal.setAttribute("aria-hidden", "true");
   modal.style.display = "none";
   document.body.style.overflow = "";
