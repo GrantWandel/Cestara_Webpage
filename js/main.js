@@ -31,6 +31,15 @@ openFormBtn.addEventListener("click", (e) => {
   openModal();
 });
 
+// Start Project button also opens modal
+const startProjectBtn = document.getElementById("startProjectBtn");
+if (startProjectBtn) {
+  startProjectBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    openModal();
+  });
+}
+
 // Close Modal
 closeModalBtn.addEventListener("click", closeModal);
 modalOverlay.addEventListener("click", closeModal);
