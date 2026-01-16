@@ -66,8 +66,9 @@ header {
 }
 
 .brand-mini strong {
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: .22em;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 14px;
 }
 
